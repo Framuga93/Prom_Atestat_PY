@@ -12,5 +12,4 @@ class Controller:
                                             , file_name)
         if format_question == 2:
             self.__repository.save_task_json(self.__repository.create_task(task[0], task[1], task[2])
-                                            , file_name)
-
+                                             , file_name)

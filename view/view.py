@@ -9,12 +9,15 @@ class View:
         self.controller = controller
 
     def show_menu(self):
-        command = input('Welcome to notebook, please take your choose: \n '
-                        '1.CREATE task\n '
-                        '2.FIND task\n '
-                        '6.UPDATE task\n'
-                        '7.DELETE task\n'
-                        '8.Exit program\n')
+        command = input('__________________________________________________\n'
+                        'Welcome to notebook, please take your choose:\n'
+                        '__________________________________________________\n'
+                        'CREATE task\n'
+                        'FIND task\n'
+                        'UPDATE task\n'
+                        'DELETE task\n'
+                        'Exit program\n'
+                        '__________________________________________________\n')
         if command == 'create':
             header = input('Insert header: ')
             task_text = input('Insert task_text: ')
@@ -31,3 +34,5 @@ class View:
             if format_question == 2:
                 file_name = input('Insert file name: ') + '.json'
                 self.controller.create_task(task, file_name, format_question)
+        if command == 'find':
+            file_name = input('Insert file name with format (Example: task.csv): ')
