@@ -1,5 +1,3 @@
-import pandas as pd
-
 from model.FileOperation import FileOperation
 from model.Repository import Repository
 from view.view import View
@@ -13,3 +11,4 @@ class Main:
         co = Controller(ro)
         vw = View(co)
         vw.show_menu()
+
